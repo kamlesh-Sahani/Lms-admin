@@ -3,17 +3,9 @@ import { IoMdEye } from "react-icons/io";
 import { AiOutlineEdit } from "react-icons/ai";
 import Link from "next/link";
 import DisplayTable from "@/app/components/DisplayTable";
-export interface RequestType {
-  id: number;
-  name: string;
-  email: string;
-  city: string;
-  role: string;
-  status: string;
-  action: JSX.Element[];
-}
-
-const requests:RequestType[] = [
+import { RequestEmployeeType } from "../adminTypes";
+import { TableColumnType } from "../adminTypes";
+const requests:RequestEmployeeType[] = [
   {
     id: 1,
     name: "Ali Samer",
@@ -324,7 +316,7 @@ const requests:RequestType[] = [
 
 
 
-const columns: any = [
+const columns: TableColumnType[] = [
   {
     Header: "ID",
     accessor: "id",
@@ -342,7 +334,7 @@ const columns: any = [
   },
   {
     Header: "City",
-    accessor: "City",
+    accessor: "city",
     className: "w-2/12 sm:w-2/12 md:w-2/12 lg:w-2/12",
   },
   {
@@ -393,6 +385,7 @@ const employe = () => {
         columns={columns}
         requests={requests}
         heading={"Employee"}
+        searchableFields={["name", "email", "city", "role", "status"]}
       />
    </>
   

@@ -1,15 +1,11 @@
 "use client";
 import { useState } from "react";
 import { useTable } from "react-table";
-const DisplayTable = ({ columns, requests, heading }: any) => {
+const DisplayTable = ({ columns, requests, heading, searchableFields }: any) => {
   const [searchQuery, setSearchQuery] = useState("");
   const filteredRequests = requests.filter((request: any) => {
-    return (
-      request.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      request.email.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      request.City.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      request.role.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      request.status.toLowerCase().includes(searchQuery.toLowerCase())
+    return searchableFields.some((field: string) =>
+      request[field]?.toString().toLowerCase().includes(searchQuery.toLowerCase())
     );
   });
 
