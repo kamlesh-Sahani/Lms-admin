@@ -2,8 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-html,body{
-    height: 100%;
-    margin: 0;
-    background-color:  rgb(243 244 246);
-}
+* {
+    scrollbar-width: none; /* Width of the scrollbar */
+    scrollbar-color: #888 #f1f1f1; /* Color of the handle and track */
+  }

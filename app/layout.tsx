@@ -16,10 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex gap-5">
-          <Sidebar/>
-          <main className="max-w-6xl flex-1 mx-auto py-4">{children}</main>
-        </div>
+        {children}
       </body>
     </html>
   );

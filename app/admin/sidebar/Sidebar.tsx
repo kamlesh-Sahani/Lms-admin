@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { AiOutlineAppstore } from "react-icons/ai";
@@ -80,20 +80,18 @@ const Sidebar = () => {
               </div>
             </li>
 
-            {
-              isopen && (
-                <div className="border-y py-5 border-slate-300">
-              <small className="pl-3 text-slate-500  inline-block mb-2">
-                Product categories
-              </small>
-              {subMenuList?.map((menu) => (
-                <div key={menu.name} className="flex flex-col gap-1">
-                  <Submenu data={menu} />
-                </div>
-              ))}
-            </div>
-              )
-            }
+            {isopen && (
+              <div className="border-y py-5 border-slate-300">
+                <small className="pl-3 text-slate-500  inline-block mb-2">
+                  Product categories
+                </small>
+                {subMenuList?.map((menu) => (
+                  <div key={menu.name} className="flex flex-col gap-1">
+                    <Submenu data={menu} />
+                  </div>
+                ))}
+              </div>
+            )}
 
             <li className="link active">
               <div className="flex overflow-x-hidden  w-full ">
