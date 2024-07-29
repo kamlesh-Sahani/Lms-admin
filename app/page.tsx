@@ -1,9 +1,11 @@
 import React from 'react'
+import AddDataForm from './components/AddDataForm'
 
 const page = () => {
   return (
-    <div>page</div>
-  )
+    <div>
+    </div>
+  )                                                                                       
 }
 
 export default page

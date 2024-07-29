@@ -1,11 +1,20 @@
 "use client";
 import { useState } from "react";
 import { useTable } from "react-table";
-const DisplayTable = ({ columns, requests, heading, searchableFields }: any) => {
+const DisplayTable = ({
+  columns,
+  requests,
+  heading,
+  searchableFields,
+  isHeading=true,
+}: any) => {
   const [searchQuery, setSearchQuery] = useState("");
   const filteredRequests = requests.filter((request: any) => {
     return searchableFields.some((field: string) =>
-      request[field]?.toString().toLowerCase().includes(searchQuery.toLowerCase())
+      request[field]
+        ?.toString()
+        .toLowerCase()
+        .includes(searchQuery.toLowerCase())
     );
   });
 
@@ -31,11 +40,13 @@ const DisplayTable = ({ columns, requests, heading, searchableFields }: any) => 
             />
           </div>
 
-          <div className="flex  gap-9 items-center">
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-              + New {heading}
-            </button>
-          </div>
+          {isHeading && (
+            <div className="flex  gap-9 items-center">
+              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                + New {heading}
+              </button>
+            </div>
+          )}
         </div>
 
         <div className="overflow-x-auto rounded-md overflow-y-auto h-[80%]">
