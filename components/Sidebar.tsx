@@ -5,7 +5,7 @@ import { AiOutlineAppstore } from "react-icons/ai";
 import { HiOutlineDatabase } from "react-icons/hi";
 import { SlSettings } from "react-icons/sl";
 import { BsPerson } from "react-icons/bs";
-import { IoIosArrowBack, IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowDown } from "react-icons/io";
 import { RiBuilding3Line } from "react-icons/ri";
 import { TbReportAnalytics } from "react-icons/tb";
 import { useState } from "react";
@@ -23,8 +23,8 @@ const Sidebar = () => {
     department: false,
     leave: false,
   });
-  const toggleSubmenu = (submenu:any) => {
-    setSubmenuStates((prevStates:any) => ({
+  const toggleSubmenu = (submenu: any) => {
+    setSubmenuStates((prevStates: any) => ({
       ...prevStates,
       [submenu]: !prevStates[submenu],
     }));
@@ -40,7 +40,7 @@ const Sidebar = () => {
       {show ? (
         <div
           onClick={() => setShow(!show)}
-          className="bg-black/50 fixed  w-full h-full text-white sm:hidden max-sm:block"
+          className="bg-black/50 fixed w-full h-full text-white sm:hidden max-sm:block"
         ></div>
       ) : (
         <IoMenuSharp
@@ -57,7 +57,7 @@ const Sidebar = () => {
       >
         {/* Sidebar Header */}
         <div className="flex items-center gap-2.5 font-medium border-b border-slate-300 py-3 mx-3 min-w-max">
-          <img src="" alt="DBIT Logo" width={45} />
+          {/* <img src="" alt="" /> */}
           <span className="text-xl whitespace-pre ">Admin</span>
         </div>
 
