@@ -6,9 +6,9 @@ const Layout = ({ children }: { children: ReactNode }) => {
     //   <main className="max-w-6xl flex-1 mx-auto py-4">{children}</main>
     // </div>
 
-    <div className="flex w-full h-[100vh] justify-between bg-green-300">
+    <div className="flex w-full  justify-between bg-green-300">
       <Sidebar />
-      <main className="max-w-6xl flex-1 mx-auto py-4">{children}</main>
+      <main className="max-w-6xl flex-1 mx-auto py-4 h-screen overflow-y-auto">{children}</main>
     </div>
   );
 };
