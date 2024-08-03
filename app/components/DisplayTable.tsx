@@ -1,12 +1,12 @@
 "use client";
 import { useState } from "react";
 import { useTable } from "react-table";
-const DisplayTable = ({
+const  DisplayTable = ({
   columns,
   requests,
   heading,
   searchableFields,
-  isHeading=true,
+  isHeading = true,
 }: any) => {
   const [searchQuery, setSearchQuery] = useState("");
   const filteredRequests = requests.filter((request: any) => {
@@ -25,15 +25,15 @@ const DisplayTable = ({
   };
 
   return (
-    <div className=" flex flex-col p-10 max-md:p-4 max-md:pt-10">
+    <div className=" flex flex-col p-10 h-[100%] max-md:p-4 max-md:pt-10 bg-red-500">
       <h1 className="text-xl font-bold ">{heading} Datas</h1>
       <div className="flex flex-col pt-5 h-screen">
-        <div className="flex mb-2 sm:mb-4   justify-between items-center gap-5 max-sm:flex-colbg-green-400">
-          <div className="flex items-center justify-center gap-4 mb-2 sm:mb-3">
-            <p className=" font-semibold">Search :</p>
+        <div className="flex mb-2 sm:mb-4 justify-between items-center max-sm:flex-col max-sm:gap-1">
+          <div className="flex items-center justify-start gap-4 w-full">
+            <p className=" font-semibold max-sm:hidden">Search :</p>
             <input
               type="text"
-              className="border rounded px-4 py-2 focus:outline-none w-full sm:w-auto"
+              className="border rounded px-4 py-2 focus:outline-none max-sm:w-full"
               placeholder="Search..."
               value={searchQuery}
               onChange={handleSearchInputChange}
@@ -41,18 +41,17 @@ const DisplayTable = ({
           </div>
 
           {isHeading && (
-            <div className="flex  gap-9 items-center">
-              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <div className="flex gap-9 items-center w-full justify-end">
+              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded max-sm:w-full">
                 + New {heading}
               </button>
             </div>
           )}
         </div>
-
-        <div className="overflow-x-auto rounded-md overflow-y-auto h-[80%]">
+        <div className="w-full rounded-md h-[80%] bg-yellow-300">
           <table
             {...getTableProps()}
-            className="w-full text-left border-2 rounded-md  overflow-x-auto"
+            className="w-full text-left border-2 rounded-md overflow-x-auto"
           >
             <thead>
               {headerGroups.map((hg, i) => (
