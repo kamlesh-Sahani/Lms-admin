@@ -317,7 +317,7 @@ const columns: TableColumnType[] = [
               Edit Details
             </h3>
             <form className="" action="#">
-              <div className="flex space-x-4">
+              {/* <div className="flex space-x-4">
                 <div className="w-1/2 pb-2">
                   <label htmlFor="firstname">First Name</label>
                   <input
@@ -338,23 +338,35 @@ const columns: TableColumnType[] = [
                     id="lastname"
                   />
                 </div>
-              </div>
+              </div> */}
               <div className="pb-2">
-                <label htmlFor="address">Current Address</label>
+                <label htmlFor="address">Name</label>
                 <input
                   className="shadow appearance-none border border-gray-400 px-4 py-2 rounded w-full text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  placeholder="Name"
                   type="text"
-                  name="address"
-                  id="address"
+                  name="name"
+                  id="name"
                 />
               </div>
-              <div>
-                <label htmlFor="role">Role</label>
+              <div className="pb-2">
+                <label htmlFor="description">Description</label>
                 <input
                   className="shadow appearance-none border border-gray-400 px-4 py-2 rounded w-full text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  placeholder="Description"
                   type="text"
-                  name="role"
-                  id="role"
+                  name="description"
+                  id="description"
+                />
+              </div>
+              <div className="pb-2">
+                <label htmlFor="days">Days per Year</label>
+                <input
+                  className="shadow appearance-none border border-gray-400 px-4 py-2 rounded w-full text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  placeholder="Days"
+                  type="number"
+                  name="days"
+                  id="days"
                 />
               </div>
             </form>
@@ -362,7 +374,7 @@ const columns: TableColumnType[] = [
               <button className="bg-blue-500 px-24 py-2 text-white rounded">
                 Update
               </button>
-              <button className="bg-blue-500 px-24 py-2 text-white rounded">
+              <button className="bg-blue-500 px-24 py-2 text-white rounded" onClick={()=> handleShowModal()}>
                 Cancel
               </button>
             </div>

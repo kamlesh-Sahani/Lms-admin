@@ -4,16 +4,23 @@ import { LeaveTypeReqeuest, TableColumnType } from "../../adminTypes";
 import { AiOutlineEdit } from "react-icons/ai";
 import Link from "next/link";
 import { IoMdEye } from "react-icons/io";
-const requests: LeaveTypeReqeuest[] = [
+import { useState } from "react";
+import Modal from "@/app/components/Modal";
+
+const employe = () => {
+  const [showModal, setShowModal] = useState<boolean>(false);
+  const handleShowModal = () =>{
+    setShowModal(!showModal);
+  }
+
+  const requests: LeaveTypeReqeuest[] = [
     {
       id: 1,
       name: "Medical Leave",
       daysPerYear: 12,
       description: "Medical leave",
       action: [
-        <Link href="/edit" key="edit1">
-          <AiOutlineEdit />
-        </Link>,
+        <AiOutlineEdit onClick={()=> handleShowModal()} />,
         <Link href="/employe/42478234920jhdsfsk" key="view1">
           <IoMdEye />
         </Link>,
@@ -66,7 +73,6 @@ const columns: TableColumnType[] = [
     },
   },
 ];
-const employe = () => {
   return (
     <>
       <DisplayTable
@@ -75,6 +81,55 @@ const employe = () => {
         heading={"Leave Type"}
         searchableFields={["leaveType", "description","name","daysPerYear"]}
       />
+       {showModal && 
+        <Modal handleShowModal={handleShowModal}>
+          <div className="py-6 px-6 lg:px-8 text-left">
+            <h3 className="mb-4 text-xl font-medium text-gray-900">
+              Edit Details
+            </h3>
+            <form className="" action="#">
+              <div className="pb-2">
+                <label htmlFor="address">Name</label>
+                <input
+                  className="shadow appearance-none border border-gray-400 px-4 py-2 rounded w-full text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  placeholder="Name"
+                  type="text"
+                  name="name"
+                  id="name"
+                />
+              </div>
+              <div className="pb-2">
+                <label htmlFor="description">Description</label>
+                <input
+                  className="shadow appearance-none border border-gray-400 px-4 py-2 rounded w-full text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  placeholder="Description"
+                  type="text"
+                  name="description"
+                  id="description"
+                />
+              </div>
+              <div className="pb-2">
+                <label htmlFor="days">Days per Year</label>
+                <input
+                  className="shadow appearance-none border border-gray-400 px-4 py-2 rounded w-full text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  placeholder="Days"
+                  type="number"
+                  name="days"
+                  id="days"
+                />
+              </div>
+            </form>
+            <div className="flex gap-x-6 py-6 ">
+              <button className="bg-blue-500 px-24 py-2 text-white rounded">
+                Update
+              </button>
+              <button className="bg-blue-500 px-24 py-2 text-white rounded" onClick={()=> handleShowModal()}>
+                Cancel
+              </button>
+            </div>
+          </div>
+        </Modal>
+      }
     </>
   );
 };

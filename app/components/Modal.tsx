@@ -11,7 +11,7 @@ const Modal: React.FC<ModalProps> = ({handleShowModal, children}) => {
       <div className="w-[600px] flex flex-col">
         <button className="text-white text-xl place-self-end" onClick={handleShowModal}>X</button>
         <div className="bg-white p-2 rounded-md">
-             {children}
+             {children}   
         </div>
       </div>
     </div>
