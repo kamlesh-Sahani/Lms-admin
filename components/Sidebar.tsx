@@ -51,7 +51,11 @@ const Sidebar = () => {
       )}
 
       <div
+<<<<<<< HEAD
         className={`bg-white shadow-xl  w-[16rem] h-screen overflow-hidden ${
+=======
+        className={`bg-white shadow-xl h-screen  w-[16rem] overflow-hidden ${
+>>>>>>> origin/main
           show ? "max-sm:-left-[0]" : "max-sm:-left-[200%] "
         } max-sm:fixed max-sm:z-[999] transition-all duration-400`}
       >

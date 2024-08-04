@@ -9,12 +9,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+<<<<<<< HEAD
       <body className={inter.className}>
         <div className="flex w-full h-screen">
           <Sidebar />
           <main className="max-w-6xl flex-1 mx-auto py-4">{children}</main>
         </div>
       </body>
+=======
+      <body className={inter.className}>{children}</body>
+>>>>>>> origin/main
     </html>
   );
 }

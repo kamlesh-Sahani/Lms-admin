@@ -4,6 +4,7 @@ import { LeaveTypeReqeuest, TableColumnType } from "../../adminTypes";
 import { AiOutlineEdit } from "react-icons/ai";
 import Link from "next/link";
 import { IoMdEye } from "react-icons/io";
+<<<<<<< HEAD
 import { useState } from "react";
 import Modal from "@/app/components/Modal";
 
@@ -14,13 +15,22 @@ const employe = () => {
   }
 
   const requests: LeaveTypeReqeuest[] = [
+=======
+const requests: LeaveTypeReqeuest[] = [
+>>>>>>> origin/main
     {
       id: 1,
       name: "Medical Leave",
       daysPerYear: 12,
       description: "Medical leave",
       action: [
+<<<<<<< HEAD
         <AiOutlineEdit onClick={()=> handleShowModal()} />,
+=======
+        <Link href="/edit" key="edit1">
+          <AiOutlineEdit />
+        </Link>,
+>>>>>>> origin/main
         <Link href="/employe/42478234920jhdsfsk" key="view1">
           <IoMdEye />
         </Link>,
@@ -32,7 +42,13 @@ const employe = () => {
       daysPerYear: 15,
       description: "Annual leave for vacations",
       action: [
+<<<<<<< HEAD
         <AiOutlineEdit onClick={()=> handleShowModal()} />,
+=======
+        <Link href="/edit" key="edit2">
+          <AiOutlineEdit />
+        </Link>,
+>>>>>>> origin/main
         <Link href="/employe/42478234921jhdsfsk" key="view2">
           <IoMdEye />
         </Link>,
@@ -44,7 +60,13 @@ const employe = () => {
       daysPerYear: 10,
       description: "Leave for illness",
       action: [
+<<<<<<< HEAD
         <AiOutlineEdit onClick={()=> handleShowModal()} />,
+=======
+        <Link href="/edit" key="edit3">
+          <AiOutlineEdit />
+        </Link>,
+>>>>>>> origin/main
         <Link href="/employe/42478234922jhdsfsk" key="view3">
           <IoMdEye />
         </Link>,
@@ -56,7 +78,13 @@ const employe = () => {
       daysPerYear: 7,
       description: "Casual leave for personal reasons",
       action: [
+<<<<<<< HEAD
         <AiOutlineEdit onClick={()=> handleShowModal()} />,
+=======
+        <Link href="/edit" key="edit4">
+          <AiOutlineEdit />
+        </Link>,
+>>>>>>> origin/main
         <Link href="/employe/42478234923jhdsfsk" key="view4">
           <IoMdEye />
         </Link>,
@@ -68,7 +96,13 @@ const employe = () => {
       daysPerYear: 180,
       description: "Leave for maternity purposes",
       action: [
+<<<<<<< HEAD
         <AiOutlineEdit onClick={()=> handleShowModal()} />,
+=======
+        <Link href="/edit" key="edit5">
+          <AiOutlineEdit />
+        </Link>,
+>>>>>>> origin/main
         <Link href="/employe/42478234924jhdsfsk" key="view5">
           <IoMdEye />
         </Link>,
@@ -80,7 +114,13 @@ const employe = () => {
       daysPerYear: 15,
       description: "Leave for new fathers",
       action: [
+<<<<<<< HEAD
         <AiOutlineEdit onClick={()=> handleShowModal()} />,
+=======
+        <Link href="/edit" key="edit6">
+          <AiOutlineEdit />
+        </Link>,
+>>>>>>> origin/main
         <Link href="/employe/42478234925jhdsfsk" key="view6">
           <IoMdEye />
         </Link>,
@@ -92,7 +132,13 @@ const employe = () => {
       daysPerYear: 5,
       description: "Leave for mourning a close family member",
       action: [
+<<<<<<< HEAD
         <AiOutlineEdit onClick={()=> handleShowModal()} />,
+=======
+        <Link href="/edit" key="edit7">
+          <AiOutlineEdit />
+        </Link>,
+>>>>>>> origin/main
         <Link href="/employe/42478234926jhdsfsk" key="view7">
           <IoMdEye />
         </Link>,
@@ -104,7 +150,13 @@ const employe = () => {
       daysPerYear: 10,
       description: "Leave for pursuing studies",
       action: [
+<<<<<<< HEAD
         <AiOutlineEdit onClick={()=> handleShowModal()} />,
+=======
+        <Link href="/edit" key="edit8">
+          <AiOutlineEdit />
+        </Link>,
+>>>>>>> origin/main
         <Link href="/employe/42478234927jhdsfsk" key="view8">
           <IoMdEye />
         </Link>,
@@ -116,7 +168,13 @@ const employe = () => {
       daysPerYear: 10,
       description: "Holidays recognized by the government",
       action: [
+<<<<<<< HEAD
         <AiOutlineEdit onClick={()=> handleShowModal()} />,
+=======
+        <Link href="/edit" key="edit9">
+          <AiOutlineEdit />
+        </Link>,
+>>>>>>> origin/main
         <Link href="/employe/42478234928jhdsfsk" key="view9">
           <IoMdEye />
         </Link>,
@@ -128,7 +186,13 @@ const employe = () => {
       daysPerYear: 5,
       description: "Leave for extra hours worked",
       action: [
+<<<<<<< HEAD
         <AiOutlineEdit onClick={()=> handleShowModal()} />,
+=======
+        <Link href="/edit" key="edit10">
+          <AiOutlineEdit />
+        </Link>,
+>>>>>>> origin/main
         <Link href="/employe/42478234929jhdsfsk" key="view10">
           <IoMdEye />
         </Link>,
@@ -140,7 +204,13 @@ const employe = () => {
       daysPerYear: 10,
       description: "Leave to work remotely",
       action: [
+<<<<<<< HEAD
         <AiOutlineEdit onClick={()=> handleShowModal()} />,
+=======
+        <Link href="/edit" key="edit11">
+          <AiOutlineEdit />
+        </Link>,
+>>>>>>> origin/main
         <Link href="/employe/42478234930jhdsfsk" key="view11">
           <IoMdEye />
         </Link>,
@@ -152,7 +222,13 @@ const employe = () => {
       daysPerYear: 5,
       description: "Leave for serving on a jury",
       action: [
+<<<<<<< HEAD
         <AiOutlineEdit onClick={()=> handleShowModal()} />,
+=======
+        <Link href="/edit" key="edit12">
+          <AiOutlineEdit />
+        </Link>,
+>>>>>>> origin/main
         <Link href="/employe/42478234931jhdsfsk" key="view12">
           <IoMdEye />
         </Link>,
@@ -164,7 +240,13 @@ const employe = () => {
       daysPerYear: 30,
       description: "Extended leave for personal projects",
       action: [
+<<<<<<< HEAD
         <AiOutlineEdit onClick={()=> handleShowModal()} />,
+=======
+        <Link href="/edit" key="edit13">
+          <AiOutlineEdit />
+        </Link>,
+>>>>>>> origin/main
         <Link href="/employe/42478234932jhdsfsk" key="view13">
           <IoMdEye />
         </Link>,
@@ -176,7 +258,13 @@ const employe = () => {
       daysPerYear: 12,
       description: "Leave for adoption purposes",
       action: [
+<<<<<<< HEAD
         <AiOutlineEdit onClick={()=> handleShowModal()} />,
+=======
+        <Link href="/edit" key="edit14">
+          <AiOutlineEdit />
+        </Link>,
+>>>>>>> origin/main
         <Link href="/employe/42478234933jhdsfsk" key="view14">
           <IoMdEye />
         </Link>,
@@ -188,7 +276,13 @@ const employe = () => {
       daysPerYear: 7,
       description: "Leave for personal reasons",
       action: [
+<<<<<<< HEAD
         <AiOutlineEdit onClick={()=> handleShowModal()} />,
+=======
+        <Link href="/edit" key="edit15">
+          <AiOutlineEdit />
+        </Link>,
+>>>>>>> origin/main
         <Link href="/employe/42478234934jhdsfsk" key="view15">
           <IoMdEye />
         </Link>,
@@ -200,7 +294,13 @@ const employe = () => {
       daysPerYear: 5,
       description: "Leave for volunteering activities",
       action: [
+<<<<<<< HEAD
         <AiOutlineEdit onClick={()=> handleShowModal()} />,
+=======
+        <Link href="/edit" key="edit16">
+          <AiOutlineEdit />
+        </Link>,
+>>>>>>> origin/main
         <Link href="/employe/42478234935jhdsfsk" key="view16">
           <IoMdEye />
         </Link>,
@@ -212,7 +312,13 @@ const employe = () => {
       daysPerYear: 5,
       description: "Leave for emergency situations",
       action: [
+<<<<<<< HEAD
         <AiOutlineEdit onClick={()=> handleShowModal()} />,
+=======
+        <Link href="/edit" key="edit17">
+          <AiOutlineEdit />
+        </Link>,
+>>>>>>> origin/main
         <Link href="/employe/42478234936jhdsfsk" key="view17">
           <IoMdEye />
         </Link>,
@@ -224,7 +330,13 @@ const employe = () => {
       daysPerYear: 10,
       description: "Leave to take care of family",
       action: [
+<<<<<<< HEAD
         <AiOutlineEdit onClick={()=> handleShowModal()} />,
+=======
+        <Link href="/edit" key="edit18">
+          <AiOutlineEdit />
+        </Link>,
+>>>>>>> origin/main
         <Link href="/employe/42478234937jhdsfsk" key="view18">
           <IoMdEye />
         </Link>,
@@ -236,7 +348,13 @@ const employe = () => {
       daysPerYear: 3,
       description: "Leave for religious observances",
       action: [
+<<<<<<< HEAD
         <AiOutlineEdit onClick={()=> handleShowModal()} />,
+=======
+        <Link href="/edit" key="edit19">
+          <AiOutlineEdit />
+        </Link>,
+>>>>>>> origin/main
         <Link href="/employe/42478234938jhdsfsk" key="view19">
           <IoMdEye />
         </Link>,
@@ -248,7 +366,13 @@ const employe = () => {
       daysPerYear: 8,
       description: "Special leave for unique circumstances",
       action: [
+<<<<<<< HEAD
         <AiOutlineEdit onClick={()=> handleShowModal()} />,
+=======
+        <Link href="/edit" key="edit20">
+          <AiOutlineEdit />
+        </Link>,
+>>>>>>> origin/main
         <Link href="/employe/42478234939jhdsfsk" key="view20">
           <IoMdEye />
         </Link>,
@@ -300,14 +424,19 @@ const columns: TableColumnType[] = [
     },
   },
 ];
+<<<<<<< HEAD
 
 
+=======
+const employe = () => {
+>>>>>>> origin/main
   return (
     <>
       <DisplayTable
         columns={columns}
         requests={requests}
         heading={"Leave Type"}
+<<<<<<< HEAD
         searchableFields={["leaveType", "description", "name", "daysPerYear"]}
       />
       {showModal && 
@@ -381,6 +510,10 @@ const columns: TableColumnType[] = [
           </div>
         </Modal>
       }
+=======
+        searchableFields={["leaveType", "description","name","daysPerYear"]}
+      />
+>>>>>>> origin/main
     </>
   );
 };

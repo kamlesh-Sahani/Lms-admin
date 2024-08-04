@@ -4,6 +4,7 @@ import { LeaveTypeReqeuest, TableColumnType } from "../../adminTypes";
 import { AiOutlineEdit } from "react-icons/ai";
 import Link from "next/link";
 import { IoMdEye } from "react-icons/io";
+<<<<<<< HEAD
 import { useState } from "react";
 import Modal from "@/app/components/Modal";
 const employe = () => {
@@ -14,13 +15,22 @@ const employe = () => {
     }
 
   const requests: LeaveTypeReqeuest[] = [
+=======
+const requests: LeaveTypeReqeuest[] = [
+>>>>>>> origin/main
     {
       id: 1,
       name: "Medical Leave",
       daysPerYear: 12,
       description: "Medical leave",
       action: [
+<<<<<<< HEAD
         <AiOutlineEdit onClick={()=> handleShowModal()} />,
+=======
+        <Link href="/edit" key="edit1">
+          <AiOutlineEdit />
+        </Link>,
+>>>>>>> origin/main
         <Link href="/employe/42478234920jhdsfsk" key="view1">
           <IoMdEye />
         </Link>,
@@ -73,11 +83,16 @@ const columns: TableColumnType[] = [
     },
   },
 ];
+<<<<<<< HEAD
+=======
+const employe = () => {
+>>>>>>> origin/main
   return (
     <>
       <DisplayTable
         columns={columns}
         requests={requests}
+<<<<<<< HEAD
         heading={"Courses"}
         searchableFields={["leaveType", "description","name","daysPerYear"]}
       />
@@ -130,6 +145,11 @@ const columns: TableColumnType[] = [
           </div>
         </Modal>
       }
+=======
+        heading={"Leave Type"}
+        searchableFields={["leaveType", "description","name","daysPerYear"]}
+      />
+>>>>>>> origin/main
     </>
   );
 };

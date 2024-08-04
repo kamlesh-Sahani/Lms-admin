@@ -3,6 +3,7 @@ import DisplayTable from "@/app/components/DisplayTable";
 import { AiOutlineEdit } from "react-icons/ai";
 import Link from "next/link";
 import { IoMdEye } from "react-icons/io";
+<<<<<<< HEAD
 import { ChangeEvent, useState } from "react";
 import Modal from "@/app/components/Modal";
 
@@ -25,13 +26,22 @@ const employe = () => {
   };
 
   const requests = [
+=======
+const requests = [
+>>>>>>> origin/main
     {
       id: 1,
       role: "Manager",
       employeeName: "Vishal Raghav",
       permission: ["home page", "admin page", "leave approval page"],
       action: [
+<<<<<<< HEAD
         <AiOutlineEdit onClick={()=> handleShowModal()} />,
+=======
+        <Link href="/edit" key="edit1">
+          <AiOutlineEdit />
+        </Link>,
+>>>>>>> origin/main
         <Link href="/employe/42478234920jhdsfsk" key="view1">
           <IoMdEye />
         </Link>,
@@ -43,7 +53,13 @@ const employe = () => {
       employeeName: "Sarah Johnson",
       permission: ["home page", "project page"],
       action: [
+<<<<<<< HEAD
         <AiOutlineEdit onClick={()=> handleShowModal()} />,
+=======
+        <Link href="/edit" key="edit2">
+          <AiOutlineEdit />
+        </Link>,
+>>>>>>> origin/main
         <Link href="/employe/9247834284jkhdsfsk" key="view2">
           <IoMdEye />
         </Link>,
@@ -55,7 +71,13 @@ const employe = () => {
       employeeName: "Michael Brown",
       permission: ["home page", "employee page", "salary page"],
       action: [
+<<<<<<< HEAD
         <AiOutlineEdit onClick={()=> handleShowModal()} />,
+=======
+        <Link href="/edit" key="edit3">
+          <AiOutlineEdit />
+        </Link>,
+>>>>>>> origin/main
         <Link href="/employe/3487234238khdjsf" key="view3">
           <IoMdEye />
         </Link>,
@@ -67,7 +89,13 @@ const employe = () => {
       employeeName: "Emily Davis",
       permission: ["home page", "design page"],
       action: [
+<<<<<<< HEAD
         <AiOutlineEdit onClick={()=> handleShowModal()} />,
+=======
+        <Link href="/edit" key="edit4">
+          <AiOutlineEdit />
+        </Link>,
+>>>>>>> origin/main
         <Link href="/employe/5823748972hdkjfs" key="view4">
           <IoMdEye />
         </Link>,
@@ -79,7 +107,13 @@ const employe = () => {
       employeeName: "James Wilson",
       permission: ["home page", "test page"],
       action: [
+<<<<<<< HEAD
         <AiOutlineEdit onClick={()=> handleShowModal()} />,
+=======
+        <Link href="/edit" key="edit5">
+          <AiOutlineEdit />
+        </Link>,
+>>>>>>> origin/main
         <Link href="/employe/9847327492hjksd" key="view5">
           <IoMdEye />
         </Link>,
@@ -157,12 +191,17 @@ const columns = [
     },
   },
 ];
+<<<<<<< HEAD
+=======
+const employe = () => {
+>>>>>>> origin/main
   return (
     <>
       <DisplayTable
         columns={columns}
         requests={requests}
         heading={"Role"}
+<<<<<<< HEAD
         searchableFields={["role", "employeeName", "permission"]}
       />
       {showModal && (
@@ -247,6 +286,10 @@ const columns = [
           </div>
         </Modal>
       )}
+=======
+        searchableFields={["role", "employeeName","permission"]}
+      />
+>>>>>>> origin/main
     </>
   );
 };
